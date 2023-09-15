@@ -24,5 +24,5 @@ Run public/init.sql to create the database tables
 Run public/data.sql to set up test data in the database
 
 ## To Run
-### Have atleast Java 16 installed
+### Have at least Java 16 installed
 `.\mvnw spring-boot:run`
