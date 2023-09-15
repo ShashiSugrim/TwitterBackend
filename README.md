@@ -6,6 +6,8 @@
 
 
 ## Before running 
+Make a resources folder in src/main
+
 Make an application.properties file in src/main/resources
 ```
 spring.datasource.url=jdbc:postgresql://localhost:5432/twitterdb
