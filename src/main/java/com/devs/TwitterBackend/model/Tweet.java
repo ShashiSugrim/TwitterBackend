@@ -26,4 +26,9 @@ public class Tweet {
         this.description = description;
         this.date_created = date_created;
     }
+
+    @Override
+    public String toString(){
+        return "Title " + title + ". Description: " + description + ".Username" + username + ".Timestamp: " + date_created;
+    }
 }
