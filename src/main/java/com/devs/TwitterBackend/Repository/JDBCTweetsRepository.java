@@ -32,4 +32,22 @@ public class JDBCTweetsRepository {
         List<Tweet> tweets = jdbcTemplate.query(sql, JDBCTweetsRepository::mapRow);
         return tweets;
     }
+
+    public void insertTweet(Tweet tweet)
+    {
+        String sql = "INSERT INTO TWEETS (username, title, description, date_created) VALUES (?, ?, ?, NOW())";
+        jdbcTemplate.update(sql, tweet.username, tweet.title, tweet.description);
+    }
+
+    public void deleteTweet(Integer id)
+    {
+        String sql = "DELETE FROM TWEETS where tweet_id = ?";
+        jdbcTemplate.update(sql, id);
+    }
+
+    public void updateTweet(Tweet tweet)
+    {
+        String sql = "UPDATE TWEETS SET title=?, description=? ,date_created=NOW() WHERE tweet_id=? ";
+        jdbcTemplate.update(sql, tweet.title, tweet.description, tweet.tweet_id);
+    }
 }
