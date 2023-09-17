@@ -1,5 +1,5 @@
 # TwitterBackend
-### A relational database for a project that aims to be a clone of twitter.
+### A REST api created in spring boot, utilizing a relational database for a project that aims to be a clone of twitter.
 
 ## Database ER model
 ![](public/model.png)
